@@ -1,0 +1,5 @@
+content	iwutoolbox				chrome/content/iwutoolbox/
+locale	iwutoolbox	en-US		chrome/locale/en-US/iwutoolbox/
+skin	iwutoolbox	default		chrome/skin/default/iwutoolbox/
+
+overlay	chrome://zotero/content/zoteroPane.xul	chrome://iwutoolbox/content/overlay.xul

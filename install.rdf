@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>ztoolbox@osaft.org</em:id>
+		<em:name>Toolbox</em:name>
+		<em:version>1.0.0</em:version>
+		<em:description>Adds a copy citation button to the Zotero toolbar, it uses the citation style selected from in the "Quick copy" preferences pane. It's a starting point, more things to come 👨‍🔬</em:description>
+		<em:creator>Jens Calisti</em:creator>
+		<em:updateURL>https://lateshift.github.io/plugins.rdf</em:updateURL>
+		<em:type>2</em:type> <!-- type=extension -->
+		
+		<!-- Requires Zotero -->
+		<em:requires>
+			<Description>
+				<em:id>zotero@chnm.gmu.edu</em:id>
+				<em:name>Zotero</em:name>
+				<em:homepageURL>http://www.zotero.org</em:homepageURL>
+				<em:minVersion>3.0</em:minVersion>
+				<em:maxVersion>6.0.*</em:maxVersion>
+			</Description>
+		</em:requires>
+    
+		<!-- Requires Firefox or Zotero Standalone -->
+		<em:targetApplication>
+			<Description>
+				<em:id>zotero@chnm.gmu.edu</em:id>
+				<em:minVersion>3.0</em:minVersion>
+				<em:maxVersion>6.0.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+	</Description>
+</RDF>

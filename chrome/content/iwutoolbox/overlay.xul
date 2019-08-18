@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://iwutoolbox/skin/overlay.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://iwutoolbox/locale/iwutoolbox.dtd">
+
+<overlay id="iwutoolbox-overlay" 
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<hbox id="zotero-items-toolbar" align="center">
+		<toolbarseparator insertafter="zotero-tb-add" id="sep1"/>
+		<toolbarbutton id="btn-copycitation" insertafter="sep1" class="zotero-tb-button" tooltiptext="&context_menu_item;" oncommand="Zotero.IWUToolbox.copyToClipboard()" />
+		<toolbarseparator insertafter="btn-copycitation"/>
+	</hbox>
+
+
+	<!-- Include the main extension logic -->
+	<script src="chrome://zotero/content/include.js"/>
+	<script src="chrome://iwutoolbox/content/include.js" type="application/javascript;version=1.8"/>
+</overlay>

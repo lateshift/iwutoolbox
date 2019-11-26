@@ -16,28 +16,28 @@ Zotero.IWUToolbox = {
       contentType: 'text',
       // id: 'http://www.zotero.org/styles/american-medical-association',
       id: 'http://www.zotero.org/styles/apa-iwu',
-      locale: 'en-US',
+     // locale: 'en-US',
+      locale: 'de-DE',
     };
 
     if (Zotero.Styles.initialized) {
       var handler = function(obj, worked) {};
       var items = Zotero.getActiveZoteroPane().getSelectedItems();
 
-      //Zotero.logError('Items: ' + JSON.stringify(items, null, 4));
+      Zotero.logError('Items: ' + JSON.stringify(items, null, 4));
 
       var result = [];
 
       for (var i = 0; i < items.length; i++) {
         var obj = JSON.parse(JSON.stringify(items[i]));
-        obj.bib = Zotero.QuickCopy.getContentFromItems(
+        obj.bib = R.trim(Zotero.QuickCopy.getContentFromItems(
           [items[i]],
           p,
           handler,
           false,
-        ).text;
+        ).text);
         result.push(obj);
       }
-
       var data = {data: result};
 
       var str = JSON.stringify(data, null, 4);
